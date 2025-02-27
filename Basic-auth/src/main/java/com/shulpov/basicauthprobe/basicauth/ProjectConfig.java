@@ -26,6 +26,15 @@ public class ProjectConfig {
                 // Аутентификация для всех запросов выключена
 //                c -> c.anyRequest().permitAll()
         );
+
+        // Можно внедрять userDetailsService в общей конфигурации, если не нужен его ибн в контексте
+//        var user = User.withUsername("vshulpov")
+//                .password("12345")
+//                .roles("read")// Пока не важно какая роль, она просто должна быть
+//                .build();
+//        var userDetailsService = new InMemoryUserDetailsManager(user);
+//        http.userDetailsService(userDetailsService);
+
         return http.build();
     }
 
