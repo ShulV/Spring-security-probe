@@ -50,3 +50,7 @@ P.S. на проде сертификат имеет в цепочке CA дов
 
 ---
 
+После переопределения userDetailsService и passwordEncoder, у нас есть захардкоженый юзер:
+```bash
+curl -k -u vshulpov:12345 https://localhost:8080/test
+```
